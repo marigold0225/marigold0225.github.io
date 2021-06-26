@@ -71,13 +71,14 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://marigold0225.github.io/2021/06/26/manjaro/" data-id="ckqdh7fgn0002vdawai9wbcs1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="https://marigold0225.github.io/2021/06/26/manjaro/" data-id="ckqdhkai30001eyaw9pug1v1k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+        <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="date" content="2021-06-26 16:10:01">
+<meta name="tags" content><style>body {
   max-width: 980px;
   border: 1px solid #ddd;
   outline: 1300px solid #fff;
@@ -1536,50 +1537,8 @@ filetype plugin on
 
     <footer class="entry-meta">
     <a href="/2021/06/26/manjaro/">
-    <time datetime="2021-06-26T07:46:48.875Z" class="entry-date">
+    <time datetime="2021-06-26T08:12:40.604Z" class="entry-date">
         2021-06-26
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-marigold-md" class="post-marigold-md post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2021/06/25/marigold-md/">manjaro 的安装与配置</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://marigold0225.github.io/2021/06/25/marigold-md/" data-id="ckqdh7fgl0001vdaw7kle0om6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2021/06/25/marigold-md/">
-    <time datetime="2021-06-25T11:27:19.000Z" class="entry-date">
-        2021-06-25
     </time>
 </a>
     
@@ -1598,16 +1557,24 @@ filetype plugin on
 
       <header class="entry-header">
         
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2021/06/26/manjaro/">manjaro</a>
+    </h1>
+  
+
+        
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://marigold0225.github.io/2021/06/25/manjaro/" data-id="ckqdh7fgh0000vdaw8x6hdlti" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="https://marigold0225.github.io/2021/06/26/manjaro/" data-id="ckqdhkahy0000eyaw4lrqbxl0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <p>#Manjaro 安装配置<br>由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。</p>
-
+<img src="/2021/06/26/manjaro/06/26/manjaro/neofetch.png" class>
 
 <h2 id="ISO下载与制作启动盘"><a href="#ISO下载与制作启动盘" class="headerlink" title="ISO下载与制作启动盘"></a>ISO下载与制作启动盘</h2><p>首先到下面网址下载好kde版本的iso，电脑下载rufus制作启动盘</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://manjaro.org/get-manjaro/</span><br></pre></td></tr></table></figure>
@@ -1632,7 +1599,7 @@ filetype plugin on
 <p>这个时候我们可以去github下载项目，然后跑脚本（不是）<br>使用一下工具查看 raw.githubusercontent.com 的IP地址<br><a target="_blank" rel="noopener" href="https://site.ip138.com/raw.githubusercontent.com/">https://site.ip138.com/raw.githubusercontent.com/</a> ，然后修改hosts文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br><span class="line">添加</span><br><span class="line">查询到的国内可用ip raw.githubusercontent.com</span><br></pre></td></tr></table></figure>
 <p>修改完成后在运行</p>
-
+<img src="/2021/06/26/manjaro/06/26/manjaro/ohmyzsh.png" class>
 <p>安装插件<br>语法高亮</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 <p>自动补全</p>
@@ -1650,15 +1617,16 @@ filetype plugin on
 <p>这些插件里的taglist如果不能正确运行的话，是缺少了，ctags，下载一个就是了。然后终端打开vim</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PluginInstall</span><br></pre></td></tr></table></figure>
 <p>等待插件安装完成<br>##其他软件安装<br>sublime（文档编写），texlive，filezilla，git本地ssh密钥网上找找，这些都随便弄弄就行了<br>最后kde桌面自己再美化一下，大功告成</p>
+<img src="/2021/06/26/manjaro/06/26/manjaro/desktop.png" class>
 
 
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2021/06/25/manjaro/">
-    <time datetime="2021-06-25T10:37:24.737Z" class="entry-date">
-        2021-06-25
+    <a href="/2021/06/26/manjaro/">
+    <time datetime="2021-06-26T08:10:01.000Z" class="entry-date">
+        2021-06-26
     </time>
 </a>
     
@@ -1699,11 +1667,7 @@ filetype plugin on
           </li>
         
           <li>
-            <a href="/2021/06/25/marigold-md/">manjaro 的安装与配置</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/25/manjaro/">(no title)</a>
+            <a href="/2021/06/26/manjaro/">manjaro</a>
           </li>
         
       </ul>
