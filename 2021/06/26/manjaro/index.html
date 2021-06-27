@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"marigold0225.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。">
+  <meta name="description" content="由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。 ISO下载与制作启动盘首先到下面网址下载好kde版本的iso，电脑下载rufus制作启动盘 1https:&#x2F;&#x2F;manjaro.org&#x2F;get-manjaro&#x2F; 安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Manjaro的配置">
 <meta property="og:url" content="https://marigold0225.github.io/2021/06/26/manjaro/index.html">
 <meta property="og:site_name" content="The Seven Heaven">
-<meta property="og:description" content="由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。">
+<meta property="og:description" content="由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。 ISO下载与制作启动盘首先到下面网址下载好kde版本的iso，电脑下载rufus制作启动盘 1https:&#x2F;&#x2F;manjaro.org&#x2F;get-manjaro&#x2F; 安装">
 <meta property="og:locale">
 <meta property="og:image" content="https://marigold0225.github.io/2021/06/26/manjaro/neofetch.png">
 <meta property="og:image" content="https://marigold0225.github.io/2021/06/26/manjaro/ohmyzsh.png">
 <meta property="og:image" content="https://marigold0225.github.io/2021/06/26/manjaro/desktop.png">
 <meta property="article:published_time" content="2021-06-26T08:10:01.000Z">
-<meta property="article:modified_time" content="2021-06-27T09:09:01.904Z">
+<meta property="article:modified_time" content="2021-06-27T09:55:24.865Z">
 <meta property="article:author" content="Marigold">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://marigold0225.github.io/2021/06/26/manjaro/neofetch.png">
 
@@ -199,7 +200,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-27 17:09:01" itemprop="dateModified" datetime="2021-06-27T17:09:01+08:00">2021-06-27</time>
+                <time title="Modified: 2021-06-27 17:55:24" itemprop="dateModified" datetime="2021-06-27T17:55:24+08:00">2021-06-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,8 +223,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。<br><img src="/2021/06/26/manjaro/neofetch.png"></p>
-<span id="more"></span>
+        <span id="more"></span>
+<p>由于经常用到linux系统，折腾起来也蛮费劲的，想着以后万一换电脑了又得捣鼓一天，索性在这记录一下manjaro安装流程，网上当然也有，但由于版本问题往往要找很多教程才能成功弄出一个来，大多因为依赖兼容或者不够详细省略很多关键步骤。<br><img src="/2021/06/26/manjaro/neofetch.png"></p>
 <h2 id="ISO下载与制作启动盘"><a href="#ISO下载与制作启动盘" class="headerlink" title="ISO下载与制作启动盘"></a>ISO下载与制作启动盘</h2><p>首先到下面网址下载好kde版本的iso，电脑下载rufus制作启动盘</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://manjaro.org/get-manjaro/</span><br></pre></td></tr></table></figure>
 <h2 id="安装过程：略（唯一要注意的就是分区，自行百度）"><a href="#安装过程：略（唯一要注意的就是分区，自行百度）" class="headerlink" title="安装过程：略（唯一要注意的就是分区，自行百度）"></a>安装过程：略（唯一要注意的就是分区，自行百度）</h2><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>任何一个linux装好系统后第一件事就是换源，不然下载速度爆炸<br>在终端执行以下命令</p>
@@ -270,6 +271,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
 
         
 
@@ -364,6 +368,12 @@
           
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
