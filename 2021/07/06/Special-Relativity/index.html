@@ -28,7 +28,7 @@
 <meta property="og:description" content="关于广义相对论的一点数学知识和概念">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-06T06:42:15.000Z">
-<meta property="article:modified_time" content="2021-10-28T12:22:08.734Z">
+<meta property="article:modified_time" content="2021-12-12T08:03:13.620Z">
 <meta property="article:author" content="marigold">
 <meta property="article:tag" content="General_Relativity">
 <meta name="twitter:card" content="summary">
@@ -200,7 +200,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-28 20:22:08" itemprop="dateModified" datetime="2021-10-28T20:22:08+08:00">2021-10-28</time>
+                <time title="修改时间：2021-12-12 16:03:13" itemprop="dateModified" datetime="2021-12-12T16:03:13+08:00">2021-12-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,14 +224,14 @@
 
       
         <p>关于广义相对论的一点数学知识和概念<br />
-<span id="more"></span><br />
-## 等效原理<br />
-弱等效原理：引力场与惯性场的力学效应是局域不可区分的<br />
+<span id="more"></span></p>
+<h2 id="等效原理">等效原理</h2>
+<p>弱等效原理：引力场与惯性场的力学效应是局域不可区分的<br />
 强等效原理：引力场和惯性场的一切物理效应是局域不可区分的<br />
-惯性系：在引力场中自由下落的无自转的无穷小的参考系<br />
-## 黎曼几何和张量分析<br />
-### 在SR下的定义 （lorentz变化）<br />
-<span class="math display">\[x^{\prime}_{\mu}=a_{\mu \nu}x_{\nu}\]</span><br />
+惯性系：在引力场中自由下落的无自转的无穷小的参考系</p>
+<h2 id="黎曼几何和张量分析">黎曼几何和张量分析</h2>
+<h3 id="在sr下的定义-lorentz变化">在SR下的定义 （lorentz变化）</h3>
+<p><span class="math display">\[x^{\prime}_{\mu}=a_{\mu \nu}x_{\nu}\]</span><br />
 <span class="math display">\[dx_{\nu}=(a^{-1})_{\nu \mu}dx^{\prime}_{\mu}\]</span><br />
 <span class="math inline">\(aa^{-1}=I\)</span> (坐标变化线性正交) <br /><br />
 标量：坐标变化下不变<br /><br />
@@ -239,39 +239,39 @@
 <span class="math display">\[{V^{\prime}_{\mu}=a_{\mu \nu}V_{\nu}}\]</span><br />
 <span class="math display">\[{dV^{\prime}_{\mu}=a_{\mu \nu}dV_{\nu}}\]</span><br />
 张量：坐标变化下,按如下变化的：<br />
-<span class="math display">\[T^{\prime}_{\mu \nu}=a_{\mu \alpha}a_{\nu \beta}T_{\alpha \beta}\]</span><br />
-### 在GR下的定义（广义坐标变化）<br />
-<span class="math inline">\(x^{\prime \mu}=x^{\prime \mu}(x^{\nu})\)</span> ,坐标变化既不正交也不线性<br />
+<span class="math display">\[T^{\prime}_{\mu \nu}=a_{\mu \alpha}a_{\nu \beta}T_{\alpha \beta}\]</span></p>
+<h3 id="在gr下的定义广义坐标变化">在GR下的定义（广义坐标变化）</h3>
+<p><span class="math inline">\(x^{\prime \mu}=x^{\prime \mu}(x^{\nu})\)</span> ,坐标变化既不正交也不线性<br />
 <span class="math display">\[dx^{\prime \mu}=\frac{\partial x^{\prime \mu}}{\partial x^{\nu}}dx^{\nu}\]</span><br />
 标量：在广义坐标变化下不变的量<br />
 矢量：在广义坐标变化下和坐标微分元一样变的量（逆变和协变之分）<br />
 张量：<span class="math inline">\(T^{\prime \mu \nu}=\frac{\partial x^{\prime \mu}}{\partial x^{\alpha}}\frac{\partial x^{\prime \nu}}{\partial x^{\beta}}T^{\alpha \beta}\)</span> (逆变协变之分)<br /><br />
-克罗内克尔符号：二阶混合张量（证明）<br />
-### 张量代数<br />
-缩并,对称性<br />
-## 平移和联络<br />
-联络定义矢量的平移（计算）<br />
+克罗内克尔符号：二阶混合张量（证明）</p>
+<h3 id="张量代数">张量代数</h3>
+<p>缩并,对称性</p>
+<h2 id="平移和联络">平移和联络</h2>
+<p>联络定义矢量的平移（计算）<br />
 i）联络不是张量<br />
 ii）两个联络之差是张量<br />
-iii）联络的反对称部分是张量<br />
-## 协变微商<br />
-标量场的协变微商就是普通微商,且结果是逆变矢量<br />
+iii）联络的反对称部分是张量</p>
+<h2 id="协变微商">协变微商</h2>
+<p>标量场的协变微商就是普通微商,且结果是逆变矢量<br />
 协变矢量的协变微商：<span class="math display">\[A_{\mu ; \nu}=A_{\mu , \nu}-\Gamma^{\lambda}_{\mu \nu}A_{\lambda}\]</span><br /><br />
 逆变矢量的协变微商：<span class="math display">\[A^{\mu}_{ ; \nu}=A^{\mu}_{ , \nu}+\Gamma^{\mu}_{\lambda \nu}A^{\lambda}\]</span><br /><br />
-再用莱布尼兹可以算出其他张量的微商<br />
-## 测地线和仿射参量<br />
-曲线的参数方程：<span class="math inline">\(x^{\mu}=x^{\mu}(\lambda)\)</span><br /><br />
+再用莱布尼兹可以算出其他张量的微商</p>
+<h2 id="测地线和仿射参量">测地线和仿射参量</h2>
+<p>曲线的参数方程：<span class="math inline">\(x^{\mu}=x^{\mu}(\lambda)\)</span><br /><br />
 切矢：<span class="math inline">\(A^{\mu}=\frac{dx^{\mu}}{d \lambda}\)</span><br /><br />
 要求矢量平移后方向相同,可以得到测地线方程：<br />
 <span class="math inline">\(\frac{d^{2}x^{\mu}}{d\sigma^{2}}+\Gamma^{\mu}_{\alpha \beta}\frac{dx^{\alpha}}{d\sigma}\frac{dx^{\beta}}{d\sigma}=0\)</span><br /><br />
-曲线上两点平移后切矢量重合,该曲线是测地线。<br />
-## 曲率与绕率<br />
-两者之差：<span class="math display">\[A_{\lambda ; \mu ; \nu}-A_{\lambda ; \nu ; \mu}=R^{\rho}_{\lambda \mu ; \nu}A_{\rho}-2\Gamma^{\rho}_{[\nu \mu]}A_{\lambda ; \rho}\]</span><br />
+曲线上两点平移后切矢量重合,该曲线是测地线。</p>
+<h2 id="曲率与绕率">曲率与绕率</h2>
+<p>两者之差：<span class="math display">\[A_{\lambda ; \mu ; \nu}-A_{\lambda ; \nu ; \mu}=R^{\rho}_{\lambda \mu ; \nu}A_{\rho}-2\Gamma^{\rho}_{[\nu \mu]}A_{\lambda ; \rho}\]</span><br />
 前者曲率,后者绕率<br />
 绕率：矢量平移一周后不能形成封闭空间,空间是扭曲的<br />
-曲率：矢量平移一周后会有角度差<br />
-### 曲率的性质<br />
-i）后一对指标反对称<br />
+曲率：矢量平移一周后会有角度差</p>
+<h3 id="曲率的性质">曲率的性质</h3>
+<p>i）后一对指标反对称<br />
 ii）两种独立的缩并方式（13缩并,12缩并）<br />
 ## 度规和距离<br />
 平直时空：<span class="math inline">\(g_{\mu \nu}\)</span> 是对角元-1和1<br /><br />
@@ -283,9 +283,9 @@ ii）两种独立的缩并方式（13缩并,12缩并）<br />
 度规的协变微商等于0<br />
 在一个无绕空间,总能找到一个坐标变化,将时空任意一点的克式符变为0<br />
 短程线：对两点曲线做变分,计算欧拉拉格朗日方程<br />
-<span class="math display">\[\frac{d^{2}x^{\mu}}{ds^{2}}+\Gamma^{\mu}_{\alpha \beta}\frac{dx^{\alpha}}{ds}\frac{dx^{\beta}}{ds}=0\]</span><br />
-## 黎曼时空的曲率张量<br />
-<span class="math display">\[R^{\rho}_{\lambda [\mu \nu]}\]</span><br />
+<span class="math display">\[\frac{d^{2}x^{\mu}}{ds^{2}}+\Gamma^{\mu}_{\alpha \beta}\frac{dx^{\alpha}}{ds}\frac{dx^{\beta}}{ds}=0\]</span></p>
+<h2 id="黎曼时空的曲率张量">黎曼时空的曲率张量</h2>
+<p><span class="math display">\[R^{\rho}_{\lambda [\mu \nu]}\]</span><br />
 i）后一对指标反对称<br />
 ii）存在两种缩并<br />
 克式符下的曲率张量的对称性<br />
@@ -300,15 +300,15 @@ iiii）里奇恒等式：<span class="math display">\[R^{\rho}_{\lambda \mu \nu}
 爱因斯坦张量：<span class="math display">\[G_{\mu \nu}=R_{\mu \nu}-\frac{1}{2}R\]</span><br /><br />
 毕安基恒等式：（后三个指标轮转的协变微商）<br /><br />
 <span class="math display">\[G^{\mu \nu}_{ ; \nu}=0\]</span><br />
-<span class="math display">\[(R_{\mu \nu}-\frac{1}{2}R)^{ ; \nu}=0\]</span><br />
-## 重要运算<br />
-度规的微分,广义相对论就是算度规的一阶导数和二阶导数（度规-联络-曲率）<br /><br />
+<span class="math display">\[(R_{\mu \nu}-\frac{1}{2}R)^{ ; \nu}=0\]</span></p>
+<h2 id="重要运算">重要运算</h2>
+<p>度规的微分,广义相对论就是算度规的一阶导数和二阶导数（度规-联络-曲率）<br /><br />
 特殊的克式符：<span class="math display">\[\Gamma^{\mu}_{\alpha \mu}=\frac{\partial}{\partial x^{\alpha}}(\ln \sqrt{-g})\]</span><br /><br />
 散度运算：<span class="math display">\[div A^{\mu}=A^{\mu}_{ ; \mu}=\frac{1}{\sqrt{-g}}\frac{\partial}{\partial x^{\mu}}(\sqrt{-g}A^{\mu})\]</span><br /><br />
 达郎贝尔算符:<span class="math display">\[\Box=div(grad\Psi)\]</span><br /><br />
-旋度运算:<span class="math display">\[A_{\mu ; \nu}-A_{\nu ; \mu}=A_{\mu , \nu}-A_{\nu , \mu}\]</span><br />
-## 爱因斯坦方程<br />
-坐标时和固有时的区别<br />
+旋度运算:<span class="math display">\[A_{\mu ; \nu}-A_{\nu ; \mu}=A_{\mu , \nu}-A_{\nu , \mu}\]</span></p>
+<h2 id="爱因斯坦方程">爱因斯坦方程</h2>
+<p>坐标时和固有时的区别<br />
 坐标时：<span class="math inline">\(t=\frac{x^{0}}{c}\)</span>,没有意义,用与计算和逻辑分析 <br /><br />
 固有时：<span class="math display">\[ds^{2}=g_{\mu \nu}dx^{\mu}dx^{\nu}\]</span>,<span class="math inline">\(dT=\frac{ids}{c}=d \tau\)</span><br /><br />
 两者联系：<span class="math display">\[d\tau=\sqrt{-g_{00}}dt\]</span><br /><br />
@@ -318,10 +318,10 @@ iiii）里奇恒等式：<span class="math display">\[R^{\rho}_{\lambda \mu \nu}
 理想流体：<span class="math inline">\(T^{\mu \nu}=(\rho+\frac{P}{c^{2}})u^{\mu}u^{\nu}+Pg^{\mu \nu}\)</span><br /><br />
 松散介质,非相对论理想流体：<span class="math inline">\(T^{\mu \nu}=\rho u^{\mu}u^{\nu}\)</span><br /><br />
 坐标条件和边界条件:<br /><br />
-协和坐标系：<span class="math inline">\(g^{\mu \nu}\Gamma^{\lambda}_{\mu \nu}=0\)</span><br />
-## 应用<br />
-### 史瓦西解<br />
-静态球对称物体,解出度规：<br />
+协和坐标系：<span class="math inline">\(g^{\mu \nu}\Gamma^{\lambda}_{\mu \nu}=0\)</span></p>
+<h2 id="应用">应用</h2>
+<h3 id="史瓦西解">史瓦西解</h3>
+<p>静态球对称物体,解出度规：<br />
 <span class="math display">\[ds^{2}=-c^{2}(1-\frac{2GM}{c^{2}r})dt^{2}+(1-\frac{2GM}{c^{2}r})^{-1}dr^{2}+r^{2}d\theta^{2}+r^{2}sin^{2}\theta d\phi^{2}\]</span><br />
 地球上的钟:<span class="math display">\[d\tau_{2}\]</span> <br /><br />
 太阳上的钟:<span class="math display">\[d\tau_{1}\]</span> <br /><br />
@@ -414,6 +414,7 @@ iiii）里奇恒等式：<span class="math display">\[R^{\rho}_{\lambda \mu \nu}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">等效原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">黎曼几何和张量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8sr%E4%B8%8B%E7%9A%84%E5%AE%9A%E4%B9%89-lorentz%E5%8F%98%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">在SR下的定义 （lorentz变化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8gr%E4%B8%8B%E7%9A%84%E5%AE%9A%E4%B9%89%E5%B9%BF%E4%B9%89%E5%9D%90%E6%A0%87%E5%8F%98%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">在GR下的定义（广义坐标变化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%A0%E9%87%8F%E4%BB%A3%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">张量代数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E7%A7%BB%E5%92%8C%E8%81%94%E7%BB%9C"><span class="nav-number">3.</span> <span class="nav-text">平移和联络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%8F%98%E5%BE%AE%E5%95%86"><span class="nav-number">4.</span> <span class="nav-text">协变微商</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E5%9C%B0%E7%BA%BF%E5%92%8C%E4%BB%BF%E5%B0%84%E5%8F%82%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">测地线和仿射参量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B2%E7%8E%87%E4%B8%8E%E7%BB%95%E7%8E%87"><span class="nav-number">6.</span> <span class="nav-text">曲率与绕率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E7%8E%87%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">6.1.</span> <span class="nav-text">曲率的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%8E%E6%9B%BC%E6%97%B6%E7%A9%BA%E7%9A%84%E6%9B%B2%E7%8E%87%E5%BC%A0%E9%87%8F"><span class="nav-number">7.</span> <span class="nav-text">黎曼时空的曲率张量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E8%BF%90%E7%AE%97"><span class="nav-number">8.</span> <span class="nav-text">重要运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E6%96%B9%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text">爱因斯坦方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">10.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B2%E7%93%A6%E8%A5%BF%E8%A7%A3"><span class="nav-number">10.1.</span> <span class="nav-text">史瓦西解</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
