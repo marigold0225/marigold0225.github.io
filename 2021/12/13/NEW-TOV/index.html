@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"marigold0225.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="一名科研狗的随手记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Seven Heaven">
-<meta property="og:url" content="http://marigold0225.github.io/archives/2021/09/index.html">
+  <meta name="description" content="弯曲时空状态方程中中子星的质量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NEW_TOV">
+<meta property="og:url" content="http://marigold0225.github.io/2021/12/13/NEW-TOV/index.html">
 <meta property="og:site_name" content="The Seven Heaven">
-<meta property="og:description" content="一名科研狗的随手记">
+<meta property="og:description" content="弯曲时空状态方程中中子星的质量">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-13T10:10:43.000Z">
+<meta property="article:modified_time" content="2021-12-13T11:29:06.519Z">
 <meta property="article:author" content="marigold">
+<meta property="article:tag" content="neutron star">
+<meta property="article:tag" content="General_Relativity">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://marigold0225.github.io/archives/2021/09/">
+<link rel="canonical" href="http://marigold0225.github.io/2021/12/13/NEW-TOV/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | The Seven Heaven</title>
+  <title>NEW_TOV | The Seven Heaven</title>
   
 
 
@@ -160,50 +164,131 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://marigold0225.github.io/2021/12/13/NEW-TOV/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="marigold">
+      <meta itemprop="description" content="一名科研狗的随手记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="The Seven Heaven">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NEW_TOV
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-13 18:10:43 / 修改时间：19:29:06" itemprop="dateCreated datePublished" datetime="2021-12-13T18:10:43+08:00">2021-12-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/" itemprop="url" rel="index"><span itemprop="name">公式推导</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <p>弯曲时空状态方程中中子星的质量<br />
+<span id="more"></span></p>
+<h1 id="原理">原理</h1>
+<p>采用第一性原理计算，表明在中子星弯曲时空内计算的状态方程包括引力时间膨胀的影响。</p>
+<h2 id="tov的改写">TOV的改写</h2>
+<p>静态球对称度规：<br />
+<span class="math display">\[
+ds^{2}=-e^{2\Phi(r)}dt^{2}+e^{2\nu(r)}+r^{2}(d\theta^{2}+sin^{2}\theta d\phi^{2})
+\]</span><br />
+改写形式：<br />
+<span class="math display">\[
+\frac{d\Phi}{dr}=\frac{G(M+4\pi r^{3})}{r(r-2GM)},\frac{dP}{dr}=-(\rho+P)\frac{d\Phi}{dr}
+\]</span><br />
+where <span class="math inline">\(dM=4\pi r^{2}\rho dr\)</span>, P is the pressure and <span class="math inline">\(\rho\)</span> is the energy density. Additionally, <span class="math inline">\(e^{-2\nu(r)}=(1-2GM/r)\)</span>.</p>
+<h2 id="sigma-omega-model"><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\omega\)</span> MODEL</h2>
+<p>简化的<span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\omega\)</span>模型，只包含两个重子，一个轻子(<span class="math inline">\(n,p,e\)</span>).<br />
+action:<br />
+<span class="math display">\[
+S=\int{d^{4}x\sqrt{-g}}\mathcal{L}=\int{d^{4}x\sqrt{-g}}[\mathcal{L}_{D}+\mathcal{L}_{M}]
+\]</span><br />
+Dirac fermions :<br />
+<span class="math display">\[
+\mathcal{L}_{D}=-\sum_{n,p,e}\bar{\psi_{I}}(ie^{\mu}_{\alpha}\gamma^{\alpha}D_{\mu}+m_{I})\psi_{I}
+\]</span><br />
+where <span class="math inline">\(\mathcal{L}_{M}=\mathcal{L}_{\sigma}+\mathcal{L}_{\sigma i}+\mathcal{L}_{\omega}+\mathcal{L}_{\omega i}\)</span>:<br />
+<span class="math display">\[
+\mathcal{L}_{\sigma}=-\frac{1}{2}g^{\mu \nu}\partial_{\mu}\sigma \partial_{\nu}\sigma-\frac{1}{2}m^{2}_{\sigma}\sigma^{2}
+\]</span><br />
+<span class="math display">\[
+\mathcal{L}_{\sigma i}=\sum_{I=n,p}{g_{\sigma}\sigma}\bar{\psi_{I}}\psi_{I}
+\]</span><br />
+<span class="math display">\[
+\mathcal{L}_{\omega}=-g^{\mu\rho}g^{\nu\lambda}(\nabla_{[\mu\omega\nu]})(\nabla_{[\rho\omega\lambda]})-\frac{1}{2}m^{2}_{\omega}g^{\mu\nu}\omega_{\mu}_{\nu}
+\]</span><br />
+where <span class="math inline">\(\nabla_{[\mu\omega\nu]}=\frac{1}{2}(\nabla_{\mu\omega\nu}-\nabla_{\nu\omega\mu})\)</span>.<br />
+<span class="math display">\[
+\mathcal{L}_{\omega i}=\frac{\xi g^{4}_{\omega}}{4!}(g^{\mu\nu}\omega_{\mu}\omega_{\nu})^{2}+\sum_{I=n,p}{g_{\omega}\omega_{\mu}e^{\mu}_{\alpha}\bar{\psi_{I}}\gamma^{\alpha}\psi_{I}}.
+\]</span><br />
+与核物理的RMF对比，去相同情况<span class="math inline">\((n,p,e,g_{\sigma N},g_{\omega N},\omega - \omega)\)</span>.<br />
+<span class="math display">\[
+\mathcal{L}=\sum_{N}{\bar{\psi_{N}}[i\gamma^{\mu}\partial_{\mu}-(m_{N}-g_{\sigma N}\sigma)-g_{\omega N}\gamma^{\mu}\omega_{\mu}]\psi_{N}}+\frac{1}{2}\partial_{\mu}\sigma\partial^{\mu}\sigma-\frac{1}{2}m^{2}_{\sigma}\sigma^{2}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}+\frac{1}{2}m^{2}_{\mu}\omega_{\mu}\omega^{\mu}+\frac{\xi}{4!}(g^{2}_{\omega N}\omega_{\mu}\omega^{\mu})+\sum_{e}{\bar{\psi_{l}}[i\gamma^{\mu}\partial_{\mu}-m_{e}]\psi_{l}}
+\]</span></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-23T19:33:51+08:00"
-              content="2021-09-23">
-          09-23
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/neutron-star/" rel="tag"># neutron star</a>
+              <a href="/tags/General-Relativity/" rel="tag"># General_Relativity</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/23/hexo/" itemprop="url">
-            <span itemprop="name">hexo的搭建</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/10/grep-sed-awk/" rel="prev" title="grep_sed_awk">
+      <i class="fa fa-chevron-left"></i> grep_sed_awk
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -256,6 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tov%E7%9A%84%E6%94%B9%E5%86%99"><span class="nav-number">1.1.</span> <span class="nav-text">TOV的改写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sigma-omega-model"><span class="nav-number">1.2.</span> <span class="nav-text">\(\sigma\)-\(\omega\) MODEL</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -378,6 +464,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
