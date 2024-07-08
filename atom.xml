@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MF&#39;s Blogs</title>
+  
+  
+  <link href="http://marigold0225.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://marigold0225.github.io/"/>
+  <updated>2024-07-08T07:30:45.602Z</updated>
+  <id>http://marigold0225.github.io/</id>
+  
+  <author>
+    <name>marigold</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo</title>
+    <link href="http://marigold0225.github.io/2024/07/08/hexo/"/>
+    <id>http://marigold0225.github.io/2024/07/08/hexo/</id>
+    <published>2024-07-08T07:29:46.000Z</published>
+    <updated>2024-07-08T07:30:45.602Z</updated>
+    
+    
+    
+    
+    <category term="blog" scheme="http://marigold0225.github.io/categories/blog/"/>
+    
+    
+    <category term="Hexo" scheme="http://marigold0225.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://marigold0225.github.io/2024/07/07/hello-world/"/>
+    <id>http://marigold0225.github.io/2024/07/07/hello-world/</id>
+    <published>2024-07-07T14:42:07.232Z</published>
+    <updated>2024-07-07T14:42:07.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
