@@ -6,7 +6,7 @@
   <link href="http://marigold0225.github.io/atom.xml" rel="self"/>
   
   <link href="http://marigold0225.github.io/"/>
-  <updated>2024-08-05T14:17:58.287Z</updated>
+  <updated>2024-08-06T08:55:04.101Z</updated>
   <id>http://marigold0225.github.io/</id>
   
   <author>
@@ -18,23 +18,20 @@
   
   <entry>
     <title>scoop</title>
-    <link href="http://marigold0225.github.io/2024/08/05/scoop/"/>
-    <id>http://marigold0225.github.io/2024/08/05/scoop/</id>
-    <published>2024-08-05T14:16:12.000Z</published>
-    <updated>2024-08-05T14:17:58.287Z</updated>
+    <link href="http://marigold0225.github.io/2024/08/06/scoop/"/>
+    <id>http://marigold0225.github.io/2024/08/06/scoop/</id>
+    <published>2024-08-06T08:09:02.000Z</published>
+    <updated>2024-08-06T08:55:04.101Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;h3 id=&quot;更改powershell权限&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;p&gt;Windows ternimal 配置&lt;/p&gt;</summary>
     
     
     
+    
+    <category term="windows" scheme="http://marigold0225.github.io/tags/windows/"/>
+    
+    <category term="config" scheme="http://marigold0225.github.io/tags/config/"/>
     
   </entry>
   
@@ -58,7 +55,7 @@
     <link href="http://marigold0225.github.io/2021/11/28/latex-tikz/"/>
     <id>http://marigold0225.github.io/2021/11/28/latex-tikz/</id>
     <published>2021-11-28T06:29:49.000Z</published>
-    <updated>1980-01-01T00:00:00.000Z</updated>
+    <updated>2024-08-06T08:07:15.461Z</updated>
     
     
     <summary type="html">&lt;p&gt;latex下tikz作图&lt;br&gt;</summary>
