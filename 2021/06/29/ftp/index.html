@@ -20,17 +20,22 @@
     var CONFIG = {"hostname":"marigold0225.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Physics | code | vim">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MF&#39;s Blogs">
-<meta property="og:url" content="http://marigold0225.github.io/archives/2024/07/index.html">
+  <meta name="description" content="linux开启ftp服务器，并配合客户端filezilla实现文件传输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ftp服务器开启">
+<meta property="og:url" content="http://marigold0225.github.io/2021/06/29/ftp/index.html">
 <meta property="og:site_name" content="MF&#39;s Blogs">
-<meta property="og:description" content="Physics | code | vim">
+<meta property="og:description" content="linux开启ftp服务器，并配合客户端filezilla实现文件传输">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://marigold0225.github.io/2021/06/29/ftp/filezilla.png">
+<meta property="article:published_time" content="2021-06-29T06:05:54.000Z">
+<meta property="article:modified_time" content="1980-01-01T00:00:00.000Z">
 <meta property="article:author" content="marigold">
+<meta property="article:tag" content="ftp">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://marigold0225.github.io/2021/06/29/ftp/filezilla.png">
 
-<link rel="canonical" href="http://marigold0225.github.io/archives/2024/07/">
+<link rel="canonical" href="http://marigold0225.github.io/2021/06/29/ftp/">
 
 
 <script id="page-configurations">
@@ -38,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | MF's Blogs</title>
+  <title>ftp服务器开启 | MF's Blogs</title>
   
 
 
@@ -188,50 +193,119 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 10 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://marigold0225.github.io/2021/06/29/ftp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="marigold">
+      <meta itemprop="description" content="Physics | code | vim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MF's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ftp服务器开启
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-29 14:05:54" itemprop="dateCreated datePublished" datetime="2021-06-29T14:05:54+08:00">2021-06-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 1980-01-01 08:00:00" itemprop="dateModified" datetime="1980-01-01T08:00:00+08:00">1980-01-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <p>linux开启ftp服务器，并配合客户端filezilla实现文件传输<br><span id="more"></span></p>
+<h2 id="下载vsftpd"><a href="#下载vsftpd" class="headerlink" title="下载vsftpd"></a>下载vsftpd</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S vsftpd</span><br><span class="line"><span class="built_in">sudo</span> vim /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
+<p>打开配置文件，设置如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable=NO</span><br><span class="line">local_enable=YES</span><br><span class="line">write_enable=YES</span><br><span class="line">allow_writeable_chroot=YES</span><br><span class="line">local_umask=022</span><br><span class="line">dirmessage_enable=YES</span><br><span class="line">xferlog_enable=YES</span><br><span class="line">connect_from_port_20=YES</span><br><span class="line">chroot_local_user=YES</span><br><span class="line">chroot_list_enable=NO(禁止访问home以上的区域)</span><br><span class="line">listen=YES</span><br><span class="line">pam_service_name=vsftpd</span><br><span class="line">seccomp_sandbox=NO</span><br><span class="line">isolate_network=NO</span><br></pre></td></tr></table></figure><br>最后重启服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart vsftpd</span><br></pre></td></tr></table></figure><br>windows下载filezilla，新建站点，输入ip，用户名密码，连接即可，愉快的拖文件吧<br>可以看到我们只能访问用户目录，进不了root区，进去也是一片问号啥也看不了，再也不用U盘拷过来拷过去，手机文件用kdeconnect，kde桌面自带的和西欧<br><img src="filezilla.png" alt=""></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-07-07T22:42:07+08:00"
-              content="2024-07-07">
-          07-07
-        </time>
-      </div>
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/07/07/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ftp/" rel="tag"># ftp</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/28/manjaro/" rel="prev" title="manjaro的安装与配置">
+      <i class="fa fa-chevron-left"></i> manjaro的安装与配置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/06/Special-Relativity/" rel="next" title="General_Relativity">
+      General_Relativity <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -284,6 +358,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDvsftpd"><span class="nav-number">1.</span> <span class="nav-text">下载vsftpd</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

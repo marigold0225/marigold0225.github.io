@@ -39,23 +39,6 @@
   </entry>
   
   <entry>
-    <title>hexo</title>
-    <link href="http://marigold0225.github.io/2024/07/08/hexo/"/>
-    <id>http://marigold0225.github.io/2024/07/08/hexo/</id>
-    <published>2024-07-08T07:29:46.000Z</published>
-    <updated>2024-07-08T07:30:45.602Z</updated>
-    
-    
-    
-    
-    <category term="blog" scheme="http://marigold0225.github.io/categories/blog/"/>
-    
-    
-    <category term="Hexo" scheme="http://marigold0225.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://marigold0225.github.io/2024/07/07/hello-world/"/>
     <id>http://marigold0225.github.io/2024/07/07/hello-world/</id>
@@ -67,6 +50,162 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>latex-tikz</title>
+    <link href="http://marigold0225.github.io/2021/11/28/latex-tikz/"/>
+    <id>http://marigold0225.github.io/2021/11/28/latex-tikz/</id>
+    <published>2021-11-28T06:29:49.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;latex下tikz作图&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="latex" scheme="http://marigold0225.github.io/tags/latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows_scoop</title>
+    <link href="http://marigold0225.github.io/2021/11/23/windows-scoop/"/>
+    <id>http://marigold0225.github.io/2021/11/23/windows-scoop/</id>
+    <published>2021-11-23T13:25:19.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Windows ternimal 配置&lt;br&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="http://marigold0225.github.io/categories/linux/"/>
+    
+    
+    <category term="scoop" scheme="http://marigold0225.github.io/tags/scoop/"/>
+    
+    <category term="wsl" scheme="http://marigold0225.github.io/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tidal_deformability</title>
+    <link href="http://marigold0225.github.io/2021/11/22/tidal-deformability/"/>
+    <id>http://marigold0225.github.io/2021/11/22/tidal-deformability/</id>
+    <published>2021-11-22T11:16:38.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Tidal deformability of neutron star&lt;br&gt;</summary>
+    
+    
+    
+    <category term="公式推导" scheme="http://marigold0225.github.io/categories/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
+    
+    
+    <category term="General_Relativity" scheme="http://marigold0225.github.io/tags/General-Relativity/"/>
+    
+    <category term="neutron star" scheme="http://marigold0225.github.io/tags/neutron-star/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QFT</title>
+    <link href="http://marigold0225.github.io/2021/10/09/QFT/"/>
+    <id>http://marigold0225.github.io/2021/10/09/QFT/</id>
+    <published>2021-10-09T11:23:43.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;量子场论学习笔记&lt;br&gt;</summary>
+    
+    
+    
+    <category term="公式推导" scheme="http://marigold0225.github.io/categories/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
+    
+    
+    <category term="量子场论" scheme="http://marigold0225.github.io/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的搭建</title>
+    <link href="http://marigold0225.github.io/2021/09/23/hexo/"/>
+    <id>http://marigold0225.github.io/2021/09/23/hexo/</id>
+    <published>2021-09-23T11:33:51.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;heox+github+sublime 搭建博客&lt;br&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="http://marigold0225.github.io/categories/linux/"/>
+    
+    
+    <category term="manjaro" scheme="http://marigold0225.github.io/tags/manjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>General_Relativity</title>
+    <link href="http://marigold0225.github.io/2021/07/06/Special-Relativity/"/>
+    <id>http://marigold0225.github.io/2021/07/06/Special-Relativity/</id>
+    <published>2021-07-06T06:42:15.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;关于广义相对论的一点数学知识和概念&lt;br&gt;</summary>
+    
+    
+    
+    <category term="公式推导" scheme="http://marigold0225.github.io/categories/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/"/>
+    
+    
+    <category term="General_Relativity" scheme="http://marigold0225.github.io/tags/General-Relativity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ftp服务器开启</title>
+    <link href="http://marigold0225.github.io/2021/06/29/ftp/"/>
+    <id>http://marigold0225.github.io/2021/06/29/ftp/</id>
+    <published>2021-06-29T06:05:54.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;linux开启ftp服务器，并配合客户端filezilla实现文件传输&lt;br&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="http://marigold0225.github.io/categories/linux/"/>
+    
+    
+    <category term="ftp" scheme="http://marigold0225.github.io/tags/ftp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>manjaro的安装与配置</title>
+    <link href="http://marigold0225.github.io/2021/06/28/manjaro/"/>
+    <id>http://marigold0225.github.io/2021/06/28/manjaro/</id>
+    <published>2021-06-28T10:14:11.000Z</published>
+    <updated>1980-01-01T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;由于经常用到linux系统，相比之下manjaro深得人心，避免以后换电脑又到处折腾，在这里记录一下自己的配置和走过的弯路。&lt;br&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="http://marigold0225.github.io/categories/linux/"/>
+    
+    
+    <category term="manjaro" scheme="http://marigold0225.github.io/tags/manjaro/"/>
+    
+    <category term="vim" scheme="http://marigold0225.github.io/tags/vim/"/>
     
   </entry>
   
