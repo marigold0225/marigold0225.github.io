@@ -17,14 +17,14 @@ Windows 下的一些配置，包括powershell，scoop，wsl2等。
 [选择win-x64-msi安装](https://github.com/PowerShell/PowerShell/releases)
 or
 
-```[powershell]
+```bash
 winget search Microsoft.PowerShell
 winget install --id Microsoft.PowerShell --source winget
 ```
 
 ## install scoop
 
-```
+```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
@@ -33,7 +33,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 scoop是windows上的一个强大的包管理，可惜默认的软件仓库(main bucket)数量有限，因此我们需要添加额外的软件仓库：
 
-```[powershell]
+```bash
 # list support bucket
 ❯ scoop bucket known
 main
@@ -57,7 +57,7 @@ extras https://gitee.com/scoop-bucket/extras.git 2024/8/6 8:35:51       2053
 
 一般来说只需要一个main和extras就够了
 
-```
+```bash
 scoop bucket add extras
 ```
 
@@ -65,7 +65,7 @@ scoop bucket add extras
 
 ### scoop 常用命令
 
-```
+```bash
 scoop update * #更新所有包
 scoop config proxy 127.0.0.1:7890 #设置代理
 scoop uninstall appname
@@ -76,7 +76,7 @@ scoop reset appname/* #恢复app或者所有app
 
 下面是一些常用软件，包括编译器，rust小工具以及一些系统级工具(无需mingw和msys2，直接就能安装gcc和llvm，不花里胡哨)
 
-```
+```bash
 scoop list
 Installed apps:
 
@@ -150,7 +150,7 @@ zoxide        0.9.4                    main   2024-02-22 12:17:08
 
 wezterm是一个强大的跨平台终端模拟器，采用rust编写，在这个赛道有多个竞品，如alacritty，windows terminal，其中WT是json格式的config，alacritty作者摆烂，相比之下wezterm的作者就很勤快了，更重要的一个原因，wezterm是目前少数可以绕过windows下的ConPTY的terminal，它采用ssh的特性，使得wsl内可以实现很多原生linux才有的功能。
 
-```
+```bash
 scoop install wezterm
 ```
 
@@ -165,7 +165,7 @@ scoop install wezterm
 - zoxide # rust 构建的系统工具，代替cd命令
 
 也可以注释掉相应的部分来避免下载这些软件，接着打开powershell配置文件：notepad $PROFILE
-```[powershell]
+```bash
 Import-Module PSReadLine
 Invoke-Expression (&starship init powershell)
 Import-Module -Name Terminal-Icons
@@ -242,13 +242,13 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ```
 # WSL2 CUDA
 wsl2的安装不作介绍，两个概念：nvidia-smi是驱动,是nvidia显卡正常使用所必须的环境，nvcc是runtime，用于编译cpp和cu代码，NVIDIA官方建议在wsl2中无需安装任何cuda驱动，因为windows内安装完驱动之后，wsl内能自动识别到驱动：
-```
+```bash
 which nvidia-smi
 /usr/lib/wsl/lib/nvidia-smi
 
 ```
 要在wsl内安装nvcc，则需要单独安装cuda-toolkit，但是一些linux发行版默认的包管理器安装cuda，会包含驱动，为了避免驱动覆盖，我们只需要单独安装cuda-toolkit，幸运的是，archlinux的pacman内的两个package均不含驱动，直接安装即可，如果是其他发行版，移步[NVIDIA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64)，选择特定的版本安装。
-```
+```bash
 sudo pacman -S cuda cuda-tools
 sudo pacman -Ss cuda
 extra/cuda 12.5.1-1 [installed]
@@ -257,7 +257,7 @@ extra/cuda-tools 12.5.1-1 [installed]
 NVIDIA's GPU programming toolkit (extra tools: nvvp, nsight)
 ```
 该安装可能会额外下载一个gcc-13或者其他版本，因为nvcc也对gcc版本有要求，这时候如果我们默认的gcc版本不兼容，我们需要指定环境变量cuda_host_CXX：
-```
+```bash
 # nvidia hpc-sdk 用来编译fortran, 需要单独下载，搜索hpc-sdk
 export NVARCH=`uname -s`_`uname -m`
 export NVCOMPILERS=/opt/nvidia/hpc_sdk
@@ -279,7 +279,7 @@ export CUDAHOSTCXX=/usr/bin/gcc-13
 
 以上hpc-sdk和cuda都内置了nvcc，且版本一致，那为什么要下载两个呢？首先nvcc虽然看上去是一个cuda编译器，但是它实际上是一个驱动，用于调用g++编译cpp代码并且和cu代码链接起来，形成最终的可执行程序。它本身并不编译cpp，并且cuda toolkit内置了一系列cuda库，包括cuBLAS，cuFFT，cuDNN，TensorRT，一系列调试和性能分析工具，多用于机器学习，数据分析和科学计算中，而hpc-sdk是包含了CUDA的部分componet以及一系列编译器，nvfortran(没错，我就是为了这个下载的，并且hpc-sdk不支持windows)，nvc，nvc++，这个nvc++就可以直接编译cu文件。
 hpc-sdk内置的编译器：
-```
+```bash
 ❯ which nvcc                          
 /opt/nvidia/hpc_sdk/Linux_x86_64/24.7/compilers/bin/nvcc
 ❯ nvc -V                              
@@ -305,7 +305,7 @@ NVIDIA Compilers and Tools
 Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
 ```
 看上去hpc-sdk的编译器(nvcc,nvc,nvc++,nvfortran)比cuda的编译器(nvcc)完整，但是cuda的头文件比hpc-sdk内置cuda头文件更完整：
-```
+```bash
 ## 在cuda和hpc-sdk的安装目录下，我们分别查看头文件库，可以发现数量是不一致的，比如curand.h这个头文件hpc-sdk就没有:
 ❯ pwd
 /opt/cuda/include
@@ -339,7 +339,7 @@ curand_uniform.h
 
 ## 测试代码
 首先是CMakeLists:
-```[cmake]
+```cmake
 cmake_minimum_required(VERSION 3.28)
 set(CMAKE_CUDA_ARCHITECTURES "native")
 project(test CUDA)
@@ -350,7 +350,7 @@ add_executable(test main.cu)
 set_target_properties(test PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 ```
 main.cu:
-```[cpp]
+```cpp
 #include <cuda_runtime.h>
 #include <stdio.h>
 
@@ -366,7 +366,7 @@ auto main() -> int
 ```
 首先，直接使用nvcc编译，你可能会得到错误:
 
-```
+```bash
 ❯ nvcc main.cu 
 In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/24.7/cuda/12.5/include/cuda_runtime.h:82,
                  from <command-line>:
@@ -383,7 +383,7 @@ at your own risk.
 ```
 大概意思就是gcc版本不对，此时我们加上参数-ccbin gcc-13，这个gcc-13是下载cuda时自带的:
 
-```
+```bash
  nvcc -ccbin gcc-13 main.cu
  ./a.out
 hello world from GPU!
@@ -398,7 +398,7 @@ hello world from GPU!
 hello world from GPU!
 ```
 也可以直接用nvc++编译(如果下载的有hpc-sdk的话)：
-```
+```bash
 ❯ nvc++ main.cu
 ❯ ./a.out
 hello world from GPU!
@@ -413,7 +413,7 @@ hello world from GPU!
 hello world from GPU!
 ```
 如果在.cu的程序内包含了c++的标准库(比如各种STL)，需要指定c++链接库，因为nvcc并不处理c++的依赖：
-```
+```cpp
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <iostream>
@@ -430,7 +430,7 @@ auto main() -> int
 }
 ```
 此时继续编译会报错：
-```
+```bash
 ❯ nvcc -ccbin gcc-13 main.cu
 /usr/sbin/ld: /tmp/tmpxft_0001c412_00000000-11_main.o: warning: relocation again
 st `_ZSt4cout' in read-only section `.text'
@@ -450,7 +450,7 @@ d reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
 collect2: error: ld returned 1 exit status
 ```
 加上-lstdc++命令之后成功：
-```
+```bash
 ❯ nvcc -ccbin gcc-13 main.cu -lstdc++
 ❯ ./a.out
 hello world from GPU!
@@ -466,7 +466,7 @@ hello world from GPU!
 Hello world from CPU use STL!
 ```
 如果使用cmake编译：
-```
+```bash
  cmake .. && make -j
 -- The CUDA compiler identification is NVIDIA 12.5.82
 -- Detecting CUDA compiler ABI info
@@ -495,7 +495,7 @@ hello world from GPU!
 ```
 （同样，如果包含c++标准库请在CMakelists.txt末尾添加: target_link_libraries(test stdc++)
 但是假如我们把CUDAHOSTCXX变量从zshrc内移除：
-```
+```bash
  echo $CUDAHOSTCXX (无输出)
 
  cmake .. && make -j
@@ -510,11 +510,11 @@ CMake Error at /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:838 (mess
   Id flags: --keep;--keep-dir;tmp -v
 ```
 一大堆看不懂的错误，此时要想正常编译，需要以下参数指定版本:
-```
+```bash
 cmake -DCMAKE_CUDA_FLAGS="-ccbin /usr/bin/gcc-13" ..
 ```
 总而言之，cmake貌似默认使用nvcc作为编译器，wsl下要想编译cu代码，请使用以下命令:
-```
+```bash
 nvcc -ccbin gcc-13 main.cu -lstdc++
 # or
 nvc++ main.cu
@@ -526,7 +526,7 @@ cmake -DCMAKE_CUDA_FLAGS="-ccbin /usr/bin/gcc-13" ..
 ```
 ## 测试代码2（c++和cuda混合编译）
 CMakeLists
-```
+```cmake
 cmake_minimum_required(VERSION 3.28)
 set(CMAKE_CUDA_ARCHITECTURES "native")
 project(cuda_project CUDA CXX)
@@ -538,7 +538,7 @@ add_executable(cuda_project main.cpp kernel1.cu kernel2.cu)
 set_target_properties(cuda_project PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 ```
 main.cpp
-```
+```cpp
 #include <iostream>
 
 void kernel1();
@@ -556,7 +556,7 @@ auto main() -> int
 }
 ```
 kernel1
-```
+```cpp
 #include <stdio.h>
 __global__ void kernel1_func() { printf("Hello from kernel1\n"); }
 
@@ -567,7 +567,7 @@ void kernel1()
 }
 ```
 kernel2
-```
+```cpp
 #include <stdio.h>
 __global__ void kernel2_func() { printf("Hello from kernel2\n"); }
 
@@ -578,7 +578,7 @@ void kernel2()
 }
 ```
 编译
-```
+```cmake
 ❯ cmake .. && make -j
 -- The CUDA compiler identification is NVIDIA 12.5.82
 -- The CXX compiler identification is GNU 14.2.1
