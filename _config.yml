@@ -40,7 +40,10 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -48,6 +51,11 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: ""
+  exclude_language:
+    - cpp
+    - ps1
+    - python
+    - vim
   wrap: true
   hljs: false
 prismjs:
@@ -92,7 +100,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
- 
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -121,14 +129,14 @@ field: post
 format: html
 limit: 10000
 # RSS订阅
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: " "
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: 20
+#   hub:
+#   content:
+#   content_limit: 140
+#   content_limit_delim: " "
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
