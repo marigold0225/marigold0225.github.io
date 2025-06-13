@@ -1,2 +1,13 @@
-# .deploy_git/
-.nojekyll
+node_modules/
+
+public/
+
+.deploy_git/
+
+.DS_Store
+
+Thumbs.db
+
+*.log
+
+.env
