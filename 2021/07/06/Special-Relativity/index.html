@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"marigold0225.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="关于广义相对论的一点数学知识和概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="General_Relativity">
+<meta property="og:url" content="http://marigold0225.github.io/2021/07/06/Special-Relativity/index.html">
+<meta property="og:site_name" content="MF&#39;s Blogs">
+<meta property="og:description" content="关于广义相对论的一点数学知识和概念">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-06T06:42:15.000Z">
+<meta property="article:modified_time" content="2025-06-13T12:32:57.962Z">
+<meta property="article:author" content="marigold">
+<meta property="article:tag" content="General_Relativity">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://marigold0225.github.io/2021/07/06/Special-Relativity/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>General_Relativity | MF's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="MF's Blogs" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">MF's Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/marigold0225/marigold0225.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://marigold0225.github.io/2021/07/06/Special-Relativity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="marigold">
+      <meta itemprop="description" content="Physics | code | vim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MF's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          General_Relativity
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-06 14:42:15" itemprop="dateCreated datePublished" datetime="2021-07-06T14:42:15+08:00">2021-07-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-06-13 20:32:57" itemprop="dateModified" datetime="2025-06-13T20:32:57+08:00">2025-06-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/" itemprop="url" rel="index"><span itemprop="name">公式推导</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>关于广义相对论的一点数学知识和概念</p>
+<span id="more"></span>
+<h2 id="等效原理"><a href="#等效原理" class="headerlink" title="等效原理"></a>等效原理</h2><p>弱等效原理：引力场与惯性场的力学效应是局域不可区分的<br>强等效原理：引力场和惯性场的一切物理效应是局域不可区分的<br>惯性系：在引力场中自由下落的无自转的无穷小的参考系</p>
+<h2 id="黎曼几何和张量分析"><a href="#黎曼几何和张量分析" class="headerlink" title="黎曼几何和张量分析"></a>黎曼几何和张量分析</h2><h3 id="在SR下的定义-（lorentz变化）"><a href="#在SR下的定义-（lorentz变化）" class="headerlink" title="在SR下的定义 （lorentz变化）"></a>在SR下的定义 （lorentz变化）</h3><p>$$x^{\prime}<em>{\mu}&#x3D;a</em>{\mu \nu}x_{\nu}$$<br>$$dx_{\nu}&#x3D;(a^{-1})<em>{\nu \mu}dx^{\prime}</em>{\mu}$$<br>$aa^{-1}&#x3D;I$   (坐标变化线性正交) <br /><br>标量：坐标变化下不变<br /><br>矢量：坐标变化下和坐标微分元一样变的量.<br /><br>$${V^{\prime}<em>{\mu}&#x3D;a</em>{\mu \nu}V_{\nu}}$$<br>$${dV^{\prime}<em>{\mu}&#x3D;a</em>{\mu \nu}dV_{\nu}}$$<br>张量：坐标变化下,按如下变化的：<br>$$T^{\prime}<em>{\mu \nu}&#x3D;a</em>{\mu \alpha}a_{\nu \beta}T_{\alpha \beta}$$   </p>
+<h3 id="在GR下的定义（广义坐标变化）"><a href="#在GR下的定义（广义坐标变化）" class="headerlink" title="在GR下的定义（广义坐标变化）"></a>在GR下的定义（广义坐标变化）</h3><p>$x^{\prime \mu}&#x3D;x^{\prime \mu}(x^{\nu})$  ,坐标变化既不正交也不线性<br>$$dx^{\prime \mu}&#x3D;\frac{\partial x^{\prime \mu}}{\partial x^{\nu}}dx^{\nu}$$<br>标量：在广义坐标变化下不变的量<br>矢量：在广义坐标变化下和坐标微分元一样变的量（逆变和协变之分）<br>张量：$T^{\prime \mu \nu}&#x3D;\frac{\partial x^{\prime \mu}}{\partial x^{\alpha}}\frac{\partial x^{\prime \nu}}{\partial x^{\beta}}T^{\alpha \beta}$   (逆变协变之分)<br /><br>克罗内克尔符号：二阶混合张量（证明）   </p>
+<h3 id="张量代数"><a href="#张量代数" class="headerlink" title="张量代数"></a>张量代数</h3><p>缩并,对称性</p>
+<h2 id="平移和联络"><a href="#平移和联络" class="headerlink" title="平移和联络"></a>平移和联络</h2><p>联络定义矢量的平移（计算）<br>i）联络不是张量<br>ii）两个联络之差是张量<br>iii）联络的反对称部分是张量</p>
+<h2 id="协变微商"><a href="#协变微商" class="headerlink" title="协变微商"></a>协变微商</h2><p>标量场的协变微商就是普通微商,且结果是逆变矢量<br>协变矢量的协变微商：$$A_{\mu ; \nu}&#x3D;A_{\mu , \nu}-\Gamma^{\lambda}<em>{\mu \nu}A</em>{\lambda}$$<br /><br>逆变矢量的协变微商：$$A^{\mu}<em>{ ; \nu}&#x3D;A^{\mu}</em>{ , \nu}+\Gamma^{\mu}_{\lambda \nu}A^{\lambda}$$<br /><br>再用莱布尼兹可以算出其他张量的微商</p>
+<h2 id="测地线和仿射参量"><a href="#测地线和仿射参量" class="headerlink" title="测地线和仿射参量"></a>测地线和仿射参量</h2><p>曲线的参数方程：$x^{\mu}&#x3D;x^{\mu}(\lambda)$<br /><br>切矢：$A^{\mu}&#x3D;\frac{dx^{\mu}}{d \lambda}$<br /><br>要求矢量平移后方向相同,可以得到测地线方程：<br>$\frac{d^{2}x^{\mu}}{d\sigma^{2}}+\Gamma^{\mu}_{\alpha \beta}\frac{dx^{\alpha}}{d\sigma}\frac{dx^{\beta}}{d\sigma}&#x3D;0$<br /><br>曲线上两点平移后切矢量重合,该曲线是测地线。</p>
+<h2 id="曲率与绕率"><a href="#曲率与绕率" class="headerlink" title="曲率与绕率"></a>曲率与绕率</h2><p>两者之差：$$A_{\lambda ; \mu ; \nu}-A_{\lambda ; \nu ; \mu}&#x3D;R^{\rho}<em>{\lambda \mu ; \nu}A</em>{\rho}-2\Gamma^{\rho}<em>{[\nu \mu]}A</em>{\lambda ; \rho}$$<br>前者曲率,后者绕率<br>绕率：矢量平移一周后不能形成封闭空间,空间是扭曲的<br>曲率：矢量平移一周后会有角度差   </p>
+<h3 id="曲率的性质"><a href="#曲率的性质" class="headerlink" title="曲率的性质"></a>曲率的性质</h3><p>i）后一对指标反对称<br>ii）两种独立的缩并方式（13缩并,12缩并）</p>
+<h2 id="度规和距离"><a href="#度规和距离" class="headerlink" title="度规和距离"></a>度规和距离</h2><p>平直时空：$g_{\mu \nu}$ 是对角元-1和1<br /><br>度规能升降指标<br>矢量的平移：计算联络<br>平移切矢方向不变：计算出测地线<br>平移长度不变：计算联络（克式符）<br>$$\Gamma^{\alpha}<em>{\mu \nu}&#x3D;\frac{1}{2}g^{\alpha \lambda}(g</em>{\mu \lambda , \nu}+g_{\nu \lambda , \mu}-g_{\mu \nu , \lambda})$$<br>度规的协变微商等于0<br>在一个无绕空间,总能找到一个坐标变化,将时空任意一点的克式符变为0<br>短程线：对两点曲线做变分,计算欧拉拉格朗日方程<br>$$\frac{d^{2}x^{\mu}}{ds^{2}}+\Gamma^{\mu}_{\alpha \beta}\frac{dx^{\alpha}}{ds}\frac{dx^{\beta}}{ds}&#x3D;0$$  </p>
+<h2 id="黎曼时空的曲率张量"><a href="#黎曼时空的曲率张量" class="headerlink" title="黎曼时空的曲率张量"></a>黎曼时空的曲率张量</h2><p>$$R^{\rho}<em>{\lambda [\mu \nu]}$$<br>i）后一对指标反对称<br>ii）存在两种缩并<br>克式符下的曲率张量的对称性<br>$$R</em>{\rho \lambda \mu \nu}&#x3D;g_{\rho \sigma}R^{\sigma}<em>{\lambda \mu \nu}$$<br>i)后一对指标反对称<br>ii）前一对指标反对称<br>iii）前一对指标与后一对指标对称<br>iiii）里奇恒等式：$$R^{\rho}</em>{\lambda \mu \nu}+R^{\rho}<em>{\mu \nu \lambda}+R^{\sigma}</em>{\nu \lambda \mu}&#x3D;0$$(后三个指标轮转)<br /><br>三个重要派生张量：<br>里奇张量：$$R_{\mu \nu}$$  (缩并得到)<br /><br>曲率标量：R（再次缩并）<br /><br>爱因斯坦张量：$$G_{\mu \nu}&#x3D;R_{\mu \nu}-\frac{1}{2}R$$<br /><br>毕安基恒等式：（后三个指标轮转的协变微商）<br /><br>$$G^{\mu \nu}<em>{ ; \nu}&#x3D;0$$<br>$$(R</em>{\mu \nu}-\frac{1}{2}R)^{ ; \nu}&#x3D;0$$</p>
+<h2 id="重要运算"><a href="#重要运算" class="headerlink" title="重要运算"></a>重要运算</h2><p>度规的微分,广义相对论就是算度规的一阶导数和二阶导数（度规-联络-曲率）<br /><br>特殊的克式符：$$\Gamma^{\mu}<em>{\alpha \mu}&#x3D;\frac{\partial}{\partial x^{\alpha}}(\ln \sqrt{-g})$$<br /><br>散度运算：$$div A^{\mu}&#x3D;A^{\mu}</em>{ ; \mu}&#x3D;\frac{1}{\sqrt{-g}}\frac{\partial}{\partial x^{\mu}}(\sqrt{-g}A^{\mu})$$<br /><br>达郎贝尔算符:$$\Box&#x3D;div(grad\Psi)$$<br /><br>旋度运算:$$A_{\mu ; \nu}-A_{\nu ; \mu}&#x3D;A_{\mu , \nu}-A_{\nu , \mu}$$</p>
+<h2 id="爱因斯坦方程"><a href="#爱因斯坦方程" class="headerlink" title="爱因斯坦方程"></a>爱因斯坦方程</h2><p>坐标时和固有时的区别<br>坐标时：$t&#x3D;\frac{x^{0}}{c}$,没有意义,用与计算和逻辑分析 <br /><br>固有时：$$ds^{2}&#x3D;g_{\mu \nu}dx^{\mu}dx^{\nu}$$,$dT&#x3D;\frac{ids}{c}&#x3D;d \tau$<br /><br>两者联系：$$d\tau&#x3D;\sqrt{-g_{00}}dt$$<br /><br>这也是地球太阳时间间隔区别,太阳附近要乘以太阳的度规：$${g_{00}}$$<br /><br>能量动量张量：<br>电磁场：$$T^{\mu \nu}&#x3D;\frac{1}{4\pi}(F^{\mu}<em>{\lambda}F^{\lambda \nu}-\frac{1}{4}g^{\mu \nu}F</em>{\rho \lambda}F^{\rho \lambda})$$<br /><br>理想流体：$T^{\mu \nu}&#x3D;(\rho+\frac{P}{c^{2}})u^{\mu}u^{\nu}+Pg^{\mu \nu}$<br /><br>松散介质,非相对论理想流体：$T^{\mu \nu}&#x3D;\rho u^{\mu}u^{\nu}$<br /><br>坐标条件和边界条件:<br /><br>协和坐标系：$g^{\mu \nu}\Gamma^{\lambda}_{\mu \nu}&#x3D;0$   </p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="史瓦西解"><a href="#史瓦西解" class="headerlink" title="史瓦西解"></a>史瓦西解</h3><p>静态球对称物体,解出度规：<br>$$ds^{2}&#x3D;-c^{2}(1-\frac{2GM}{c^{2}r})dt^{2}+(1-\frac{2GM}{c^{2}r})^{-1}dr^{2}+r^{2}d\theta^{2}+r^{2}sin^{2}\theta d\phi^{2}$$<br>地球上的钟:$$d\tau_{2}$$ <br /><br>太阳上的钟:$$d\tau_{1}$$ <br /><br>两者差距$g_{00}$:<br>$$d\tau_{2}&#x3D;(1-\frac{2GM}{c^{2}r})^{-1&#x2F;2}d\tau_{2}$$<br>引力红移: $$v&#x3D;v_{0}\sqrt{1-\frac{2GM}{c^{2}r}}$$<br>水星进动<br>史瓦西黑洞：静态球对称<br>克尔纽曼黑洞：带电旋转</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/General-Relativity/" rel="tag"># General_Relativity</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/29/ftp/" rel="prev" title="ftp服务器开启">
+      <i class="fa fa-chevron-left"></i> ftp服务器开启
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/23/hexo/" rel="next" title="hexo的搭建">
+      hexo的搭建 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">等效原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">黎曼几何和张量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8SR%E4%B8%8B%E7%9A%84%E5%AE%9A%E4%B9%89-%EF%BC%88lorentz%E5%8F%98%E5%8C%96%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">在SR下的定义 （lorentz变化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8GR%E4%B8%8B%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%88%E5%B9%BF%E4%B9%89%E5%9D%90%E6%A0%87%E5%8F%98%E5%8C%96%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">在GR下的定义（广义坐标变化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%A0%E9%87%8F%E4%BB%A3%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">张量代数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E7%A7%BB%E5%92%8C%E8%81%94%E7%BB%9C"><span class="nav-number">3.</span> <span class="nav-text">平移和联络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%8F%98%E5%BE%AE%E5%95%86"><span class="nav-number">4.</span> <span class="nav-text">协变微商</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E5%9C%B0%E7%BA%BF%E5%92%8C%E4%BB%BF%E5%B0%84%E5%8F%82%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">测地线和仿射参量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B2%E7%8E%87%E4%B8%8E%E7%BB%95%E7%8E%87"><span class="nav-number">6.</span> <span class="nav-text">曲率与绕率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E7%8E%87%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">6.1.</span> <span class="nav-text">曲率的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%A6%E8%A7%84%E5%92%8C%E8%B7%9D%E7%A6%BB"><span class="nav-number">7.</span> <span class="nav-text">度规和距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%8E%E6%9B%BC%E6%97%B6%E7%A9%BA%E7%9A%84%E6%9B%B2%E7%8E%87%E5%BC%A0%E9%87%8F"><span class="nav-number">8.</span> <span class="nav-text">黎曼时空的曲率张量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E8%BF%90%E7%AE%97"><span class="nav-number">9.</span> <span class="nav-text">重要运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E6%96%B9%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text">爱因斯坦方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">11.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B2%E7%93%A6%E8%A5%BF%E8%A7%A3"><span class="nav-number">11.1.</span> <span class="nav-text">史瓦西解</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="marigold"
+      src="/images/head.png">
+  <p class="site-author-name" itemprop="name">marigold</p>
+  <div class="site-description" itemprop="description">Physics | code | vim</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/marigold0225" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;marigold0225" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">marigold</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
